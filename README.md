@@ -1,0 +1,2 @@
+# terminals
+spring boot project
