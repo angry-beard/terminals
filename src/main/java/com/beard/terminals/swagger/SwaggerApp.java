@@ -30,7 +30,7 @@ public class SwaggerApp {
 
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
-                .title("spirit room api")
+                .title("terminals api")
                 .contact(new Contact("angry_beard", "http://www.angry-beard.fun/", ""))
                 .version("1.0")
                 .description("API 描述")
