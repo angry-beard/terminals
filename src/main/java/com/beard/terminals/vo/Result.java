@@ -34,6 +34,10 @@ public class Result<T> {
     }
 
     public static Result success() {
-        return new Result(null);
+        return new Result(200, "success");
+    }
+
+    public static Result fail() {
+        return new Result(500, "fail");
     }
 }
