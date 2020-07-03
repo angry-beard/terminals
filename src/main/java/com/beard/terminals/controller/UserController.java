@@ -38,6 +38,7 @@ public class UserController {
     @ApiOperation(value = "查询用户具体信息", notes = "通过user.id查询用信息")
     @ApiImplicitParam(name = "id", value = "用户ID", paramType = "query", required = true, dataType = "Integer")
     public Result<User> detail(@RequestParam("id") Integer id) {
+        log.info(">>>>>>>>>>>>>>>>>>>>>>>>id "+ id);
         return new Result(userService.queryById(id));
     }
 
