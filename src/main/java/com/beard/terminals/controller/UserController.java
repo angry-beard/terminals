@@ -6,6 +6,7 @@ import com.beard.terminals.vo.Result;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiOperation;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -15,6 +16,7 @@ import java.util.List;
  */
 @Api(tags = "用户操作API")
 @RestController
+@Slf4j
 @RequestMapping("user")
 public class UserController {
 
@@ -28,6 +30,7 @@ public class UserController {
     @ApiOperation(value = "获取所有用户列表", notes = "无需传参")
     @ApiImplicitParam(paramType = "query")
     public Result<List<User>> list() {
+        log.info(userService.list().toString());
         return new Result(userService.list());
     }
 
