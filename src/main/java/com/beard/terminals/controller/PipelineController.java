@@ -41,10 +41,11 @@ public class PipelineController {
     }
 
     @PostMapping("reload")
-    @ApiOperation(value = "重启操作", notes = "业务对象")
+    @ApiOperation(value = "启动操作", notes = "业务对象")
     @ApiImplicitParam(paramType = "map")
     public Result reload(Map map) {
-        PipelineTask task = pipelineTaskFactory.restoreOrNewPipelineTask(String.valueOf(map.get("testSerial")), "TEST_PIPELINE", originProcess, map);
+        PipelineTask task = pipelineTaskFactory.restoreTaskFromDatabase("testSerial_001");
+        task.run();
         log.debug("重启化管道成功 result:{}", JsonUtils.toJSONString(task));
         return Result.date(task.getExecStatus());
     }

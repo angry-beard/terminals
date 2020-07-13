@@ -29,6 +29,11 @@ public class OriginProcess extends AbstractPipelineProcess {
     @Override
     public ProcessResult process(ProcessParameter parameterMap) {
         SysUser sysUser = (SysUser) parameterMap.getRequestParam();
+        try {
+            Thread.sleep(10);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         if (!isPass(sysUser)) {
             return paused();
         }
