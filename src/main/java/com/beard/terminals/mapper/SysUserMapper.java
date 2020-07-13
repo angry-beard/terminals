@@ -1,4 +1,4 @@
-package com.beard.terminals.dao;
+package com.beard.terminals.mapper;
 
 import com.beard.terminals.domain.SysUser;
 import com.beard.terminals.domain.SysUserExample;

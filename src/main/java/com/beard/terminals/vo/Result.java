@@ -33,6 +33,10 @@ public class Result<T> {
         this.data = data;
     }
 
+    public static Result<Object> date(Object data) {
+        return new Result<>(data);
+    }
+
     public static Result success() {
         return new Result(200, "success");
     }

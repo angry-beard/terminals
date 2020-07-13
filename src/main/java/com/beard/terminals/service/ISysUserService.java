@@ -9,4 +9,5 @@ public interface ISysUserService {
     boolean insert(SysUser sysUser);
 
     List<SysUser> findAll();
+
 }

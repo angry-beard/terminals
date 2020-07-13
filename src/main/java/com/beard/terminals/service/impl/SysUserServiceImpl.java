@@ -1,6 +1,6 @@
 package com.beard.terminals.service.impl;
 
-import com.beard.terminals.dao.SysUserMapper;
+import com.beard.terminals.mapper.SysUserMapper;
 import com.beard.terminals.domain.SysUser;
 import com.beard.terminals.service.ISysUserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,4 +24,5 @@ public class SysUserServiceImpl implements ISysUserService {
     public List<SysUser> findAll() {
         return sysUserMapper.selectByExample(null);
     }
+
 }

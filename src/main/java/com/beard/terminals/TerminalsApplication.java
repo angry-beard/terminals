@@ -8,11 +8,11 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @author angry_beard
  */
 @SpringBootApplication
-@MapperScan({"com.beard.terminals.dao"})
+@MapperScan({"com.beard.terminals.mapper"})
 public class TerminalsApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(TerminalsApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(TerminalsApplication.class, args);
+    }
 
 }

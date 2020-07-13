@@ -27,7 +27,7 @@
                 false: 把JDBC DECIMAL 和 NUMERIC 类型解析为 Integer(默认)
                 true:  把JDBC DECIMAL 和 NUMERIC 类型解析为java.math.BigDecimal
             -->
-            <property name="forceBigDecimals" value="false" />
+            <property name="forceBigDecimals" value="true" />
         </javaTypeResolver>
         <!-- 生成模型的包名和位置-->
         <javaModelGenerator targetPackage="com.beard.terminals.domain" targetProject="src/main/java">
@@ -41,16 +41,17 @@
             <property name="trimStrings" value="true" />
         </javaModelGenerator>
         <!-- 生成映射文件的包名和位置-->
-        <sqlMapGenerator targetPackage="mapper" targetProject="src/main/resources">
-            <property name="enableSubPackages" value="true"/>
+        <sqlMapGenerator targetPackage="mapper" targetProject="src/main/resources/mapper">
+            <property name="enableSubPackages" value="false"/>
         </sqlMapGenerator>
         <!-- 生成DAO的包名和位置-->
-        <javaClientGenerator type="XMLMAPPER" targetPackage="com.beard.terminals.dao" targetProject="src/main/java">
+        <javaClientGenerator type="XMLMAPPER" targetPackage="com.beard.terminals.mapper" targetProject="src/main/java">
             <property name="enableSubPackages" value="true"/>
         </javaClientGenerator>
         <!-- 要生成的表 tableName是数据库中的表名或视图名 domainObjectName是实体类名-->
         <!-- <table tableName="risk_model_order" domainObjectName="DSRiskModelOrder" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
          <table tableName="tel_bill_record" domainObjectName="DSTelBillRecord" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>-->
-        <table tableName="sys_user"></table>
+        <table tableName="pipeline_task"></table>
+        <table tableName="pipeline_process"></table>
     </context>
 </generatorConfiguration>

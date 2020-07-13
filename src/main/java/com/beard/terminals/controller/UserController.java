@@ -1,6 +1,5 @@
 package com.beard.terminals.controller;
 
-import com.beard.terminals.dao.SysUserMapper;
 import com.beard.terminals.domain.SysUser;
 import com.beard.terminals.domain.User;
 import com.beard.terminals.service.ISysUserService;
