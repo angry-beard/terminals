@@ -39,7 +39,7 @@ public class OriginProcess extends AbstractPipelineProcess {
         }
         List<SysUser> list = sysUserService.findAll();
         log.info("处理业务逻辑 list:{}", JsonUtils.toJSONString(list));
-        return nextProcess(postProcess);
+        return nextProcess(postProcess, list);
     }
 
     private boolean isPass(SysUser sysUser) {
