@@ -29,7 +29,7 @@ public class PipelineCommonService {
         PipelineTaskExample example = new PipelineTaskExample();
         example.createCriteria().andExecStatusEqualTo(PipelineExecStatus.INIT.toString()).andNameEqualTo(taskName)
                 .andCreatedAtLessThan(new DateTime().minusMinutes(2).toDate());
-        example.setOrderByClause("updated_at limit 10");
+        example.setOrderByClause("id limit 10");
         List<PipelineTask> initTaskList = pipelineTaskMapper.selectByExampleWithBLOBs(example);
         if (!CollectionUtils.isEmpty(initTaskList)) {
             ConcurrentLinkedQueue<PipelineTask> queue = new ConcurrentLinkedQueue<>(initTaskList);

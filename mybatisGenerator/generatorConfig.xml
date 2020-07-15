@@ -25,9 +25,9 @@
 
         <!--jdbc的数据库连接 -->
         <jdbcConnection driverClass="com.mysql.jdbc.Driver"
-                        connectionURL="jdbc:mysql://123.207.198.100:3306/terminals"
+                        connectionURL="jdbc:mysql://cdb-17ejfrt8.cd.tencentcdb.com:10004/terminals"
                         userId="root"
-                        password="123456">
+                        password="Mysql@3306">
         </jdbcConnection>
 
 
