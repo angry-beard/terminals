@@ -5,6 +5,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.*;
 
+import java.io.Serializable;
+
 /**
  * @author angry_beard
  */
@@ -14,7 +16,7 @@ import lombok.*;
 @ApiModel("用户对象")
 @NoArgsConstructor
 @AllArgsConstructor
-public class User {
+public class User implements Serializable {
 
     @ApiModelProperty(required = true, notes = "用户名", example = "哪吒")
     private String name;
